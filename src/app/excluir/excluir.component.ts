@@ -9,7 +9,7 @@ import { Viagem } from '../app.component';
 })
 export class ExcluirComponent {
   static viagens=[
-    new Viagem(1, 'Acapulco', 'LAZER', new Date(), new Date(), 2, 1000),
+    new Viagem(1, 'Acapulco', 'LAZER', new Date(), new Date(), 2),
   ]
 
   constructor(private router: Router) {}

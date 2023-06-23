@@ -9,14 +9,13 @@ export class AppComponent {
   title = 'pw3-viagens';
 }
 export class Viagem {
-  constructor(id: number, destino: string, tipo: string, dataChegada: Date, dataSaida: Date, qtdPessoas: number, valor: number) {
+  constructor(id: number, destino: string, tipo: string, dataChegada: Date, dataSaida: Date, qtdPessoas: number) {
     this.id = id;
     this.destino = destino;
     this.tipo = tipo;
     this.dataChegada = dataChegada;
     this.dataSaida = dataSaida;
     this.qtdPessoas = qtdPessoas;
-    this.valor = valor;
   }
   id: number;
   destino = '';
@@ -24,5 +23,4 @@ export class Viagem {
   dataChegada = new Date();
   dataSaida = new Date();
   qtdPessoas: number;
-  valor: number;
 }

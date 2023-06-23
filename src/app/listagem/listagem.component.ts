@@ -8,10 +8,10 @@ import { Viagem } from '../app.component';
 })
 export class ListagemComponent {
   static viagens=[
-    new Viagem(1, 'Acapulco', 'LAZER', new Date(), new Date(), 2, 1000),
-    new Viagem(2, 'Egito (Cairo)', 'LAZER', new Date(), new Date(), 3, 1350),
-    new Viagem(3, 'Nova Zelandia', 'LAZER', new Date(), new Date(), 2, 1000),
-    new Viagem(4, 'Australia', 'LAZER', new Date(), new Date(), 3, 1350),
+    new Viagem(1, 'Acapulco', 'LAZER', new Date(), new Date(), 2),
+    new Viagem(2, 'Egito (Cairo)', 'LAZER', new Date(), new Date(), 3),
+    new Viagem(3, 'Nova Zelandia', 'LAZER', new Date(), new Date(), 2),
+    new Viagem(4, 'Australia', 'LAZER', new Date(), new Date(), 3),
   ]
 
   constructor(private router: Router) {}
