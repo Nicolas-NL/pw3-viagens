@@ -1,0 +1,57 @@
+<div class="container align-items-center" id="aCada">
+    <div class="container" id="titulo">
+    <a style="font-size: 150%;">Detalhes da viagem</a>
+  </div>
+  <div class="container justify-content-center" id ="cadastrar">
+    <div class="register-form ">
+      <form formGroup="cadastroform" (ngSubmit) = "cadastrar()">
+        <div class=""></div>
+        <div class="form-group">
+          <label>Destino</label>
+          <input type="text" class="form-control"formControlName="nome" />
+          <div *ngIf="cadastroform.get('nome')?.errors?.['required'] && cadastroform.get('nome')?.touched">  Nome obrigatório</div>
+  
+        </div>
+  
+        <div class="form-group">
+          <label>Tipo</label>
+          <input type="text" minlength="3" maxlength="15" class="form-control" formControlName="usuario"/>
+          <div *ngIf="cadastroform.get('usuario')?.errors?.['required'] && cadastroform.get('usuario')?.touched">  Nome de Usuário obrigatório</div>
+  
+        </div>
+  
+        <div class="form-group">
+          <label>Data de chegada</label>
+          <input type="date"  class="form-control" formControlName="email" ngModel email="true"/>
+          <div *ngIf="cadastroform.get('email')?.errors?.['required'] && cadastroform.get('email')?.touched">  Email obrigatório</div>
+  
+        </div>
+  
+        <div class="form-group">
+          <label>Data de saida</label>
+          <input type = "date" minlength="8" maxlength="12" class="form-control" formControlName="senha"/>
+          <div *ngIf="cadastroform.get('senha')?.errors?.['required'] && cadastroform.get('senha')?.touched">  Senha obrigatória</div>
+  
+        </div>
+  
+        <div class="form-group">
+          <label>Orçamento</label>
+          <input type="password" minlength="8" maxlength="12" class="form-control" formControlName="confirmaSenha" />
+          <div *ngIf="cadastroform.get('confirmaSenha')?.errors?.['required'] && cadastroform.get('confirmaSenha')?.touched"> Confirma Senha Obrigatoria</div>
+        <div *ngIf="cadastroform.get('confirmaSenha')?.value != cadastroform.get('senha')?.value && cadastroform.get('confirmaSenha')?.touched"> Senha incorreta</div>
+        </div>
+        <div class="form-group">
+          <label>Qtde.Pessoas</label>
+          <input type="password" minlength="8" maxlength="12" class="form-control" formControlName="confirmaSenha" />
+          <div *ngIf="cadastroform.get('confirmaSenha')?.errors?.['required'] && cadastroform.get('confirmaSenha')?.touched"> Confirma Senha Obrigatoria</div>
+        <div *ngIf="cadastroform.get('confirmaSenha')?.value != cadastroform.get('senha')?.value && cadastroform.get('confirmaSenha')?.touched"> Senha incorreta</div>
+        </div>
+        <div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
+          <button type="submit" class="btn btn-primary" [disabled]="cadastroform.invalid">Enviar</button>
+        </div>
+  
+      </form>
+  
+    </div>
+    </div>
+  </div>

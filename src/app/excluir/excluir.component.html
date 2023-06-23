@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="container"  id="tutu">
+      <a style="font-size: 150%;">Tem certeza que deseja excluir a viagem abaixo?</a>
+     </div>
+
+<div class="container">
+    <div class="container"  id="title">
+      <a style="font-size: 150%;">Excluir Viagem</a>
+    </div>
+        
+      <div class="card" >
+        <div class="container" style="overflow-x:auto">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Destino</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Data de chegada</th>
+            <th scope="col">Data de saída</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody >
+                  
+            <tr *ngFor="let item of getViagens">
+            <td >{{item.destino}}</td>
+            <td>{{item.tipo}}</td>
+            <td>{{item.dataChegada | date : 'dd/MM/yyyy'}}</td>
+            <td>{{item.dataSaida | date : 'dd/MM/yyyy'}}</td>
+            <td><button [routerLink]="['/listagem']" class="button btn btn-secondary">Voltar</button></td>
+            <td><button [routerLink]="['/listagem']" class="button btn btn-warning">Confirmar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>
