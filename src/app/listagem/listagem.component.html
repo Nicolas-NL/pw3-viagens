@@ -4,7 +4,6 @@
       <div class="container"  id="title">
         <a style="font-size: 150%;">Minhas viagens</a>
       </div>
-          
         <div class="card" >
           <div class="container" style="overflow-x:auto">
         <table class="table table-striped">
@@ -14,12 +13,9 @@
               <th scope="col">Tipo</th>
               <th scope="col">Data de chegada</th>
               <th scope="col">Data de saída</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
             </tr>
           </thead>
-          <tbody >
-                    
+          <tbody >    
               <tr *ngFor="let item of getViagens">
               <td >{{item.destino}}</td>
               <td>{{item.tipo}}</td>
